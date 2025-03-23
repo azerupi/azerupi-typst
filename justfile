@@ -21,4 +21,4 @@ install:
     echo "Installing to $HOME/.local/share/typst/packages/local/$package/$version"
     mkdir -p "$HOME/.local/share/typst/packages/local/$package/$version"
     rm -r "$HOME/.local/share/typst/packages/local/$package/$version/"
-    cp -r . "$HOME/.local/share/typst/packages/local/$package/$version/"
+    rsync -a --exclude='.*' . "$HOME/.local/share/typst/packages/local/$package/$version/"

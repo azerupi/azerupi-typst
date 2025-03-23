@@ -2,14 +2,29 @@
 
 #show: project_long.with()
 
-= Heading 1
+= Heading
+
+#lorem(200)
+
+== Sub-heading
+
+#lorem(200)
+
+=== Sub-sub-heading
 
 #lorem(100)
 
-== Heading 1.1
+#pagebreak(weak: true)
 
-#lorem(100)
+== Sub-heading
 
-=== Heading 1.1.1
+#lorem(200)
 
-#lorem(100)
+= Heading
+
+== Sub-heading
+=== Sub-sub-heading
+==== Sub-sub-sub-heading
+===== Sub-sub-sub-sub-heading
+====== Sub-sub-sub-sub-sub-heading
+#lorem(200)
