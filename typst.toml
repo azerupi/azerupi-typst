@@ -1,0 +1,14 @@
+[package]
+name = "azerupi"
+version = "0.1.0"
+compiler = "0.13.0"
+entrypoint = "lib.typ"
+authors = ["Azerupi"]
+license = "MIT"
+description = "Azerupi's templates for writing technical documents."
+repository = ""
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "img/showcase-l.png"
