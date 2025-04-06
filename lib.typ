@@ -8,14 +8,13 @@
   cover
   pagebreak(weak: true)
 
-  show: project_empty.with()
-
   set page(margin: (x: 30mm, top: 35mm, bottom: 50mm))
 
   /****************************************************************************
    *                                Headings
    *
    ****************************************************************************/
+  show heading: set text(font: "Roboto")
   set heading(numbering: "1.1")
 
   show heading: set block(below: 10mm, above: 15mm)
@@ -57,8 +56,39 @@
    *
    * Paragraphs have text that is slightly lighter than pure black.
    ****************************************************************************/
-  show par: set text(font: "sans-serif", fill: luma(15%))
+  show par: set text(font: "libertinus serif", fill: luma(15%))
   set par(justify: true)
+
+  show list: set text(font: "libertinus serif", fill: luma(15%))
+  show enum: set text(font: "libertinus serif", fill: luma(15%))
+
+  /****************************************************************************
+   *                                Lists
+   *
+   ****************************************************************************/
+  set enum(numbering: "1.1", full: true)
+
+  /****************************************************************************
+   *                                Outline
+   *
+   ****************************************************************************/
+  show outline.entry.where(level: 1): it => {
+    set text(font: "Roboto", weight: "bold")
+
+    let inner = {
+      it.body()
+      h(1fr)
+      it.page()
+    }
+
+    block(
+      above: 5mm,
+      link(
+        it.element.location(),
+        it.indented(it.prefix(), inner),
+      ),
+    )
+  }
 
   body
 }

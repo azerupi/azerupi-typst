@@ -2,6 +2,8 @@
 
 #show: project_long.with()
 
+#outline()
+
 = Heading
 
 #lorem(200)
